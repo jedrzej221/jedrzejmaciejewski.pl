@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors - Ali Abdaal Inspired Light Theme */
+  --color-bg-main: #F2F0E9;
+  --color-bg-card: #FFFFFF;
+  --color-primary: #FD976D;
+  --color-primary-hover: #E88A60;
+  --color-secondary: #62C9E4;
+  --color-text-main: #1B1624;
+  --color-text-muted: #4B5563;
+  --color-border-color: rgba(0, 0, 0, 0.05);
+
+  /* Shadows */
+  --shadow-card: 0 50px 80px -15px rgba(224, 216, 208, 0.65);
+  --shadow-hover: 0 60px 90px -15px rgba(224, 216, 208, 0.8);
+
+  /* Spacing */
+  --radius-card: 24px;
+  --radius-button: 9999px;
+
+  /* Fonts */
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+/* Custom Utilities */
+.section {
+  padding: 3rem 1.5rem;
+  /* Reduced padding for mobile */
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 5rem 0;
+    /* Originalish padding for desktop */
+  }
+}
+
+.soft-card {
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.soft-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: var(--radius-button);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+/* Re-map old vars if needed for compatibility */
+:root {
+  --bg-main: var(--color-bg-main);
+  --text-main: var(--color-text-main);
+  --text-muted: var(--color-text-muted);
+  --primary: var(--color-primary);
+  --secondary: var(--color-secondary);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+}
