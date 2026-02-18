@@ -4,8 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // Base URL must match the repository name for GitHub Pages project sites
-  base: '/jedrzejmaciejewski.pl/',
+  // Base URL should be '/' for custom domains
+  base: '/',
   server: {
     host: true
   }
